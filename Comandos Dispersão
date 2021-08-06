@@ -1,6 +1,4 @@
-library(ggplot2)
+library(ggplot2); library("ggpubr")
 data<-read.table("PBxNI.2.csv", sep="\t", header=TRUE)
 ggplot(data, aes(y = PB, x = NI, color = Grupo)) +
   geom_point(size = 3)
-
-
