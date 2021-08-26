@@ -1,4 +1,4 @@
-library(ggplot2); library("ggpubr")
+library(ggplot2); library(ggpubr)
 data<-read.table("PBxNI.2.csv", sep="\t", header=TRUE)
-ggplot(data, aes(y = PB, x = NI, color = Grupo)) +
+ggplot(data, aes(y = PB, x = NI, color = Grupo)) + scale_color_manual(values=c("black", "red2", "darkgreen", "blue")) +
   geom_point(size = 3)
